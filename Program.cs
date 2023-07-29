@@ -1,4 +1,6 @@
-﻿namespace King1._1
+﻿using System.Text;
+
+namespace King1._1
 {
     internal class Program
     {
@@ -143,6 +145,8 @@
 
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.Unicode;
+            Console.InputEncoding = Encoding.Unicode;
             FillPlayers();
             while (!isGameEnd)
             {
