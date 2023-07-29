@@ -12,6 +12,7 @@ namespace King1._1
 
         static void FillPlayers()
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             do
             {
                 Console.Clear();
@@ -57,17 +58,17 @@ namespace King1._1
             {
                 if (numbers[i] == 0)
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.Clear();
-                    Console.WriteLine($"Король - {players[i]}");
-                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"{players[i]} - Король");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                 }
             }
             Console.ReadKey();
             Console.Clear();
             for (int i = 0; i < players.Count(); i++)
             {
-                Console.WriteLine($"{i + 1}. {players[i]}\t {numbers[i]}");
+                Console.WriteLine($"{i + 1}. {players[i]}      \t {numbers[i]}");
             }
             numbers.Clear();
         }
